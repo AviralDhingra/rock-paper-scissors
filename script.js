@@ -1,32 +1,20 @@
 let userScore = 0;
 let computerScore = 0;
-// const rounds = prompt('How Many Rounds Do You Want To Play?')
 
 function print(mssg, elementID) {
     document.getElementById(elementID).innerHTML = mssg;
 }
 
-function play(userWeapon) {
-    // const rockButton = document.getElementById('Rock');
-    // const paperButton = document.getElementById('Paper');
-    // const scissorsButton = document.getElementById('Scissors');
-    
-    // let userWeapon;
-    // while (userWeapon  === undefined) {
-    //     rockButton.addEventListener('click', () => {
-    //     userWeapon = 'Rock';
-    //     return userWeapon;
-    //     })
-    //     paperButton.addEventListener('click', () => {
-    //         userWeapon = 'Paper';
-    //         return userWeapon;
-    //     })
-    //     scissorsButton.addEventListener('click', () => {
-    //         userWeapon = 'Scissors';
-    //         return userWeapon;
-    //     })
-    // }
+function isGameEnd(computerScore, userScore) {
+    const RACE_TO = 3
+    if (computerScore === RACE_TO || userScore === RACE_TO) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+function play(userWeapon) {
     const OPTIONS = ['Rock', 'Paper', 'Scissors']
     const randomIndex = Math.floor(Math.random() * OPTIONS.length);
     const computerWeapon = OPTIONS[randomIndex];
@@ -43,4 +31,12 @@ function play(userWeapon) {
     }
     print(computerScore, 'computer_score')
     print(userScore, 'user_score')
+    
+    if (isGameEnd(computerScore, userScore)== true) {
+        if (computerScore > userScore) {
+            alert('You Lost')
+        } else {
+            alrt('You Won')
+        }
+    }
 }
