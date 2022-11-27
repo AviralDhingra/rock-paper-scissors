@@ -20,6 +20,34 @@ function play(userWeapon) {
     const computerWeapon = OPTIONS[randomIndex];
     print(`The Computer Chose ${computerWeapon}`, 'computer_choice');
 
+    const playerSign = document.getElementById("user_weapon_img");
+    const computerSign = document.getElementById("computer_weapon_img");
+
+    switch (userWeapon) {
+        case 'Rock':
+            playerSign.src = "img/rock.png"
+            break
+        case 'Paper':
+            playerSign.src = "img/paper.png"
+            break
+        case 'Scissors':
+            playerSign.src = "img/scissors.png"
+            break
+    }
+
+    switch (computerWeapon) {
+        case 'Rock':
+            computerSign.src = "img/rock.png"
+            break
+        case 'Paper':
+            computerSign.src = "img/paper.png"
+            break
+        case 'Scissors':
+            computerSign.src = "img/scissors.png"
+            break
+    }
+
+
     if (computerWeapon === userWeapon) {
         print('It Was A Tie!', 'result');
     } else if ((computerWeapon === 'Rock' && userWeapon === 'Paper') || (computerWeapon === 'Paper' && userWeapon === 'Scissors') || (computerWeapon === 'Scissors' && userWeapon === 'Rock')) {
@@ -36,7 +64,7 @@ function play(userWeapon) {
         if (computerScore > userScore) {
             alert('You Lost')
         } else {
-            alrt('You Won')
+            aledrt('You Won')
         }
     }
 }

@@ -8,33 +8,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input
-      id="Rock"
-      type="image"
-      name="Rock"
-      src="img/rock.png"
-      onclick="play('Rock');"
-    />
-    <input
-      id="Paper"
-      type="image"
-      name="Paper"
-      src="img/paper.png"
-      onclick="play('Paper');"
-    />
-    <input
-      id="Scissors"
-      type="image"
-      name="Scissors"
-      src="img/scissors.png"
-      onclick="play('Scissors');"
-    />
-    <p>Computer Score :</p>
-    <p id="computer_score">0</p>
-    <p>User Score :</p>
-    <p id="user_score">0</p>
-    <p id="computer_choice"></p>
-    <p id="result"></p>
+    <div class="choice_img">
+      <img
+        id="user_weapon_img"
+        src="img/question_mark.png"
+        alt="Question Mark"
+      />
+      <img
+        id="computer_weapon_img"
+        src="img/question_mark.png"
+        alt="Question Mark"
+      />
+    </div>
+    <div class="options">
+      <input
+        id="Rock"
+        type="image"
+        name="Rock"
+        src="img/rock.png"
+        onclick="play('Rock');"
+      />
+      <input
+        id="Paper"
+        type="image"
+        name="Paper"
+        src="img/paper.png"
+        onclick="play('Paper');"
+      />
+      <input
+        id="Scissors"
+        type="image"
+        name="Scissors"
+        src="img/scissors.png"
+        onclick="play('Scissors');"
+      />
+    </div>
+    <div class="dashboard">
+      <p>Computer Score :</p>
+      <p id="computer_score">0</p>
+      <p>User Score :</p>
+      <p id="user_score">0</p>
+      <p id="computer_choice"></p>
+      <p id="result"></p>
+    </div>
 
     <script src="script.js"></script>
   </body>
