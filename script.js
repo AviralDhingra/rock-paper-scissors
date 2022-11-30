@@ -60,11 +60,11 @@ function play(userWeapon) {
     print(computerScore, 'computer_score')
     print(userScore, 'user_score')
     
-    if (isGameEnd(computerScore, userScore)== true) {
+    if (isGameEnd(computerScore, userScore) === true) {
         if (computerScore > userScore) {
             alert('You Lost')
         } else {
-            aledrt('You Won')
+            alert('You Won')
         }
     }
 }
